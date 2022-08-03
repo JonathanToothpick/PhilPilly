@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Rabbit-assets/PhillyPill_initialSprites.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/PhilPilly.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.6232, 54.5998 )
+
+[node name="PhilPilly" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -60.0052 )
+scale = Vector2( 7.5, 7.5 )
+texture = ExtResource( 1 )
+hframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.08889, -54.5999 )
+shape = SubResource( 1 )
